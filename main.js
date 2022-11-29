@@ -1,19 +1,6 @@
-const myForm = document.querySelector('#my-form');
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const msg = document.querySelector('.msg');
-const userList = document.querySelector('#users');
+const btn = document.querySelector('.btn');
 
-myForm.addEventListener('submit',onSubmit);
-
-function onSubmit(e) {
+btn.addEventListener('click', (e) => {
     e.preventDefault();
-
-    if(nameInput.value === '' || emailInput.value === '') {
-        msg.classList.add('error');
-        msg.innerHTML = 'Please enter all fields';
-    }   else {
-        console.log('success');
-        
-    }
-}
+    console.log(e.target.className);
+});
